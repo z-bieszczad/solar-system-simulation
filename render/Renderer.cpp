@@ -21,4 +21,18 @@ void Renderer::init(int argc, char** argv) {
     glutInitWindowSize(1024, 768);
     glutInitWindowPosition(100, 100);
     glutCreateWindow("Solar System 3D - Simulation");
+
+    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_COLOR_MATERIAL);
+
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+
+    setupLighting();
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    gluPerspective(FOV, 1024.0/768.0, NEAR_PLANE, FAR_PLANE);
+    glMatrixMode(GL_MODELVIEW);
 }
