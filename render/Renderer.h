@@ -40,8 +40,7 @@ class Renderer {
 
         bool _paused;
         float _timeScale;
-        int x;
-        
+
         static constexpr float NEAR_PLANE = 0.1f;
         static constexpr float FAR_PLANE = 1000.0f;
         static constexpr float FOV = 45.0f;
